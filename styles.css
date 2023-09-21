@@ -1,0 +1,29 @@
+html, main {
+    text-align: center;
+}
+
+:root {
+    --base: #bceeaf;
+    --spacing: 10px;
+    --blur: 10px;
+}
+
+
+.box{
+    padding: var(--spacing);
+    background: var(--base);
+    filter: blur(var(--blur));
+    margin: auto;
+    width: 300px;
+    height: 200px;
+    margin-top: 15%;
+    border: 5px solid gray;
+}
+
+.colorSway {
+    color: var(--base);
+}
+
+h3{
+    margin-top: auto;
+}
