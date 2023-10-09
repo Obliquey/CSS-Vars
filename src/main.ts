@@ -1,9 +1,9 @@
 const inputs: NodeListOf<HTMLInputElement> = document.querySelectorAll('.controls input');
 
-const handleUpdate = (input: HTMLInputElement): any => {
-    console.log(input);
+function handleUpdate(this: HTMLInputElement) {
+    const suffix = this.dataset.sizing || '';
+    document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
 }
 
-for(let something of inputs){
-    handleUpdate(something);
-}
+inputs.forEach(item => item.addEventListener('change', handleUpdate))
+inputs.forEach(item => item.addEventListener('mousemove', handleUpdate))
